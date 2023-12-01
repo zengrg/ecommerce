@@ -15,7 +15,6 @@ import {
 import { addNewAddressFormControls } from "@/utls";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
-import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
 export default function Account() {
@@ -41,7 +40,6 @@ export default function Account() {
 
     if (res.success) {
       setPageLevelLoader(false);
-
       setAddresses(res.data);
     }
   }
@@ -120,7 +118,9 @@ export default function Account() {
   }
 
   useEffect(() => {
-    if (user !== null) extractAllAddresses();
+    if (user !== null) {
+      extractAllAddresses();
+    }
   }, [user]);
 
   return (
