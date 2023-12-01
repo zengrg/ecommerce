@@ -23,10 +23,13 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/admin/all-products", {
-      method: "GET",
-      cache: "no-store",
-    });
+    const res = await fetch(
+      "https://ecommerce-t5kb.vercel.app/api/admin/all-products",
+      {
+        method: "GET",
+        cache: "no-store",
+      }
+    );
 
     const data = await res.json();
     return data;
@@ -73,7 +76,7 @@ export const deleteProduct = async (id) => {
 export const productByCategory = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/client/product-by-category?id=${id}`,
+      `https://ecommerce-t5kb.vercel.app/api/client/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -89,7 +92,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/client/product-by-id?id=${id}`,
+      `https://ecommerce-t5kb.vercel.app/api/client/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
