@@ -76,7 +76,7 @@ export const deleteProduct = async (id) => {
 export const productByCategory = async (id) => {
   try {
     const res = await fetch(
-      `https://ecommerce-t5kb.vercel.app/api/client/product-by-category?id=${id}`,
+      `${process.env.websiteLink}/api/client/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -92,7 +92,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `https://ecommerce-t5kb.vercel.app/api/client/product-by-id?id=${id}`,
+      `${process.env.websiteLink}/api/client/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",

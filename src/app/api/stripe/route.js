@@ -15,10 +15,8 @@ export async function POST(req) {
         payment_method_types: ["card"],
         line_items: res,
         mode: "payment",
-        success_url:
-          "https://ecommerce-t5kb.vercel.app/checkout" + "?status=success",
-        cancel_url:
-          "https://ecommerce-t5kb.vercel.app/checkout" + "?status=cancel",
+        success_url: `${process.env.websiteLink}/checkout` + "?status=success",
+        cancel_url: `${process.env.websiteLink}/checkout` + "?status=cancel",
       });
 
       return NextResponse.json({

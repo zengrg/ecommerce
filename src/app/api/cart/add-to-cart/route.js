@@ -37,11 +37,6 @@ export async function POST(req) {
       });
 
       if (isCurrentCartItemAlreadyExists?.length > 0) {
-        // return NextResponse.json({
-        //   success: false,
-        //   message:
-        //     "Product is already added in cart! Please add different product",
-        // });
         const quantity = isCurrentCartItemAlreadyExists[0].quantity + 1;
         const updateProductOnCart = await Cart.findOneAndUpdate(
           {
