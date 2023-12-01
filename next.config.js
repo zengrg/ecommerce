@@ -6,7 +6,7 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: `${process.env.websiteLink}/api/:path*`,
+        source: "https://ecommerce-peach-iota.vercel.app/api/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
