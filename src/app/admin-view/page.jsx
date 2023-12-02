@@ -23,6 +23,7 @@ export default function AdminView() {
   async function extractAllOrdersForAllUsers() {
     setPageLevelLoader(true);
     const res = await getAllOrders();
+    console.log(res);
 
     if (res.success) {
       setPageLevelLoader(false);

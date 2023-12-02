@@ -59,7 +59,7 @@ export const getOrderDetails = async (id) => {
 export const getAllOrders = async () => {
   try {
     const res = await fetch(
-      `https://ecommerce-peach-iota.vercel.app/api/admin/orders/get-all-orders`,
+      "https://ecommerce-peach-iota.vercel.app/api/admin/orders/get-all-orders",
       {
         method: "GET",
         headers: {
