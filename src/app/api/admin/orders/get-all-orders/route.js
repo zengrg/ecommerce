@@ -7,10 +7,10 @@ export const dynamic = "force-dynamic";
 
 export async function GET(req) {
   try {
-    await connectToDB();
     const isAuthUser = await AuthUser(req);
 
-    if (isAuthUser?.role === "Admin") {
+    if (isAuthUser) {
+      await connectToDB();
       const getAllOrders = await Order.find({})
         .populate("orderItems.product")
         .populate("user");
@@ -37,7 +37,7 @@ export async function GET(req) {
     console.log(e);
     return NextResponse.json({
       success: false,
-      message: "Something went wrong ! Please try again later",
+      message: e,
     });
   }
 }
