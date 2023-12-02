@@ -1,13 +1,10 @@
 "use client";
 
-import { GlobalContext } from "@/context";
 import { getAllAdminProducts } from "@/services/product";
 import { useRouter } from "next/navigation";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const { isAuthUser } = useContext(GlobalContext);
-
   const [products, setProducts] = useState([]);
   const router = useRouter();
 
@@ -22,8 +19,6 @@ export default function Home() {
   useEffect(() => {
     getListOfProducts();
   }, []);
-
-  console.log(products);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

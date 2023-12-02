@@ -6,7 +6,6 @@ import Notification from "@/components/Notification";
 import { GlobalContext } from "@/context";
 import { getAllOrders, updateOrder } from "@/services/order";
 import { useContext, useEffect } from "react";
-import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
 export default function AdminView() {
