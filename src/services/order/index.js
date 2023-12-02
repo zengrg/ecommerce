@@ -22,7 +22,7 @@ export const createNewOrder = async (formData) => {
 export const getAllOrdersForUser = async (id) => {
   try {
     const res = await fetch(
-      `${process.env.websiteLink}/api/order/get-all-orders?id=${id}`,
+      `https://ecommerce-peach-iota.vercel.app/api/order/get-all-orders?id=${id}`,
       {
         method: "GET",
         headers: {
@@ -41,7 +41,7 @@ export const getAllOrdersForUser = async (id) => {
 export const getOrderDetails = async (id) => {
   try {
     const res = await fetch(
-      `${process.env.websiteLink}/api/order/order-details?id=${id}`,
+      `https://ecommerce-peach-iota.vercel.app/api/order/order-details?id=${id}`,
       {
         method: "GET",
         headers: {
@@ -59,7 +59,7 @@ export const getOrderDetails = async (id) => {
 export const getAllOrders = async () => {
   try {
     const res = await fetch(
-      `${process.env.websiteLink}/api/admin/orders/get-all-orders`,
+      `https://ecommerce-peach-iota.vercel.app/api/admin/orders/get-all-orders`,
       {
         method: "GET",
         headers: {
